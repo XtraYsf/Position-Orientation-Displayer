@@ -1,0 +1,193 @@
+local G2L = {};
+
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Position/Orientation Displayer]];
+
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["2"]["Size"] = UDim2.new(0.25019, 0, 0.22276, 0);
+G2L["2"]["Position"] = UDim2.new(0.72235, 0, 0.73971, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Main]];
+
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 10);
+
+G2L["4"] = Instance.new("UIStroke", G2L["2"]);
+G2L["4"]["Thickness"] = 3;
+G2L["4"]["Color"] = Color3.fromRGB(60, 60, 60);
+
+G2L["5"] = Instance.new("TextLabel", G2L["2"]);
+G2L["5"]["TextWrapped"] = true;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["TextScaled"] = true;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["TextSize"] = 14;
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/Arial.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["BackgroundTransparency"] = 1;
+G2L["5"]["Size"] = UDim2.new(0.83841, 0, 0.17391, 0);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[discord: xtraysf]];
+G2L["5"]["Name"] = [[crd]];
+G2L["5"]["Position"] = UDim2.new(0, 0, 0.05435, 0);
+
+G2L["6"] = Instance.new("TextButton", G2L["2"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextSize"] = 14;
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["TextScaled"] = true;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(226, 102, 102);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["6"]["Size"] = UDim2.new(0.12195, 0, 0.21739, 0);
+G2L["6"]["Name"] = [[Close]];
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[X]];
+G2L["6"]["Position"] = UDim2.new(0.85976, 0, 0.03261, 0);
+
+G2L["7"] = Instance.new("UICorner", G2L["6"]);
+G2L["7"]["CornerRadius"] = UDim.new(0, 10);
+
+G2L["8"] = Instance.new("LocalScript", G2L["6"]);
+G2L["8"]["Name"] = [[Close]];
+
+G2L["9"] = Instance.new("TextLabel", G2L["2"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+G2L["9"]["TextScaled"] = true;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["TextSize"] = 14;
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(86, 255, 128);
+G2L["9"]["BackgroundTransparency"] = 1;
+G2L["9"]["Size"] = UDim2.new(0.18598, 0, 0.27174, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[POS:]];
+G2L["9"]["Name"] = [[postitle]];
+G2L["9"]["Position"] = UDim2.new(0.02744, 0, 0.32065, 0);
+
+G2L["a"] = Instance.new("TextLabel", G2L["2"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 128);
+G2L["a"]["BackgroundTransparency"] = 1;
+G2L["a"]["Size"] = UDim2.new(0.18598, 0, 0.27174, 0);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[ORI:]];
+G2L["a"]["Name"] = [[orititle]];
+G2L["a"]["Position"] = UDim2.new(0.02744, 0, 0.59239, 0);
+
+G2L["b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextScaled"] = true;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(86, 255, 128);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Size"] = UDim2.new(0.75, 0, 0.16848, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[0,0,0,0]];
+G2L["b"]["Name"] = [[Position]];
+G2L["b"]["Position"] = UDim2.new(0.23171, 0, 0.375, 0);
+
+G2L["c"] = Instance.new("TextLabel", G2L["2"]);
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextScaled"] = true;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 128);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["Size"] = UDim2.new(0.75, 0, 0.16848, 0);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[0,0,0,0]];
+G2L["c"]["Name"] = [[Orientation]];
+G2L["c"]["Position"] = UDim2.new(0.23171, 0, 0.6413, 0);
+
+G2L["d"] = Instance.new("LocalScript", G2L["2"]);
+G2L["d"]["Name"] = [[handler]];
+
+G2L["e"] = Instance.new("LocalScript", G2L["2"]);
+G2L["e"]["Name"] = [[DragScript]];
+
+local function C_8()
+local script = G2L["8"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+	
+end;
+task.spawn(C_8);
+
+local function C_d()
+local script = G2L["d"];
+	local player = game.Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local mainFrame = script.Parent
+	local positionLabel = mainFrame:WaitForChild("Position")
+	local orientationLabel = mainFrame:WaitForChild("Orientation")
+	
+	local function updateLabels()
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			local rootPart = character.HumanoidRootPart
+			positionLabel.Text = tostring(rootPart.Position)
+			orientationLabel.Text = tostring(rootPart.Orientation)
+		end
+	end
+	
+	game:GetService("RunService").Heartbeat:Connect(updateLabels)
+end;
+task.spawn(C_d);
+
+local function C_e()
+local script = G2L["e"];
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_e);
+
+return G2L["1"], require;
